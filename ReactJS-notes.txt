@@ -1,0 +1,3 @@
+*   Design Pattern - Components either render information or do processing, not both.
+    pass everything to a parent component ASAP
+*   Design Pattern - There are two kinds of render components: Display and Action
