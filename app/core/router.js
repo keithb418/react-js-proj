@@ -4,6 +4,15 @@ let React = require('react');
 let SplashPage = require('../pages/splash/splash-page');
 let HomePage = require('../pages/home/home-page');
 
+let style = {
+    background: 'url("../images/red-leather.jpg")',
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
+    right: 0,
+    top: 0
+};
+
 class Router extends React.Component{
     constructor(props) {
         super(props);
@@ -26,7 +35,7 @@ class Router extends React.Component{
 
     render() {
         return (
-            <div className="page">{this.routes[this.state.route]}</div>
+            <div style={style}>{this.routes[this.state.route]}</div>
         );
     }
 };
