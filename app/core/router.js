@@ -3,14 +3,10 @@ let React = require('react');
 // Pages
 let SplashPage = require('../pages/splash/splash-page');
 let HomePage = require('../pages/home/home-page');
+let MainPage = require('../pages/main/main-page');
 
 let style = {
-    background: 'url("../images/red-leather.jpg")',
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0
+    height: window.outerHeight  
 };
 
 class Router extends React.Component{
@@ -21,9 +17,14 @@ class Router extends React.Component{
             route: 'splash'
         };
 
+        let handleRoute = (route) => {
+            this.navigate(route);
+        };
+
         this.routes = {
-            splash: <SplashPage navigate={(route) => this.navigate(route)} subtitle={this.props.options.subtitle} />,
-            home: <HomePage navigate={(route) => this.navigate(route)} />
+            splash: <SplashPage navigate={handleRoute} subtitle={this.props.options.subtitle} />,
+            home: <HomePage navigate={handleRoute} />,
+            main: <MainPage navigate={handleRoute} options={this.props.options} />
         };
     }
 

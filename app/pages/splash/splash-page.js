@@ -6,16 +6,21 @@ let colors = require('../../../assets/styles/colors.js');
 let shadows = require('../../../assets/styles/shadows.js');
 
 let pageStyle = {
+    background: 'url("../images/red-leather.jpg")',
+    boxSizing: 'border-box',
     color: colors.gold,
+    height: '100%',
+    paddingTop: 15,
     textAlign: 'center',
-    textShadow: shadows.textShadow
+    textShadow: shadows.textShadow,
+    width: '100%',
 };
 
 let h1Style = {
     borderBottom: '4px solid',
     fontSize: 60,
     margin: '0 auto',
-    padding: 15,
+    padding: '0 15px 15px 15px',
     width: 'calc(100% - 100px)'
 };
 
@@ -26,10 +31,15 @@ let h2Style = {
 let iconStyle = {
     borderRadius: '100%',
     border: `4px solid ${colors.gold}`,
-    boxShadow: shadows.boxShadow,
+    boxShadow: shadows.engraveShadow,
     fontSize: 100,
     padding: 25
 };
+
+let buttonStyle = {
+    color: colors.gold,
+    marginTop: 15
+}
 
 class SplashPage extends React.Component{
     constructor(props) {
@@ -53,7 +63,7 @@ class SplashPage extends React.Component{
                         style={iconStyle}
                     />
                 </div>
-                <MenuButton name="Start" onClick={() => this.props.navigate('home')} />
+                <MenuButton name="Start" style={buttonStyle} onClick={() => this.props.navigate('home')} />
             </div>
         );
     }

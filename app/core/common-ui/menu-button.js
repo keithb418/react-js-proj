@@ -1,4 +1,5 @@
 let React = require('react');
+let FontAwesome = require('react-fontawesome');
 
 let colors = require('../../../assets/styles/colors');
 let shadows = require('../../../assets/styles/shadows.js');
@@ -6,17 +7,15 @@ let utils = require('../utils');
 
 let style = {
     background: 'transparent',
-    border: `4px solid ${colors.gold}`,
-    borderRadius: 10,
-    boxShadow: shadows.boxShadow,
-    color: colors.gold,
+    border: '0 none',
+    color: colors.ink,
     display: 'block',
+    fontFamily: 'Times New Roman',
     fontSize: 30,
     fontWeight: 'bold',
-    margin: '15px auto 0 auto',
+    margin: '0 auto 15px auto',
     padding: 15,
-    textShadow: shadows.textShadow,
-    width: 200
+    textDecoration: 'underline'
 };
 
 class MenuButton extends React.Component {
@@ -25,10 +24,12 @@ class MenuButton extends React.Component {
     }
 
     render() {
-        style = utils.extend(style, this.props.style);
+        let buttonStyle = utils.extend({}, style, this.props.style);
 
         return (
-            <button style={style} id={this.createId()} onClick={this.props.onClick} >{this.props.name}</button>
+            <button style={buttonStyle} id={this.createId()} onClick={this.props.onClick} >
+                * {this.props.name} *
+            </button>
         ); 
     }
 }
