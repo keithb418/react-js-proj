@@ -10,7 +10,6 @@ let style = {
     border: '0 none',
     color: colors.ink,
     display: 'block',
-    fontFamily: 'Times New Roman',
     fontSize: 30,
     fontWeight: 'bold',
     margin: '0 auto 15px auto',

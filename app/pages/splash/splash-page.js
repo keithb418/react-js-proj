@@ -7,7 +7,6 @@ let shadows = require('../../../assets/styles/shadows.js');
 
 let pageStyle = {
     background: 'url("../images/red-leather.jpg")',
-    boxSizing: 'border-box',
     color: colors.gold,
     height: '100%',
     paddingTop: 15,

@@ -7,7 +7,6 @@ let shadows = require('../../../assets/styles/shadows.js');
 
 let style = {
     backgroundColor: colors.grey,
-    boxSizing: 'border-box',
     height: '100%',
     padding: 10
 };

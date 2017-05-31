@@ -11,7 +11,6 @@ let pageStyle = {
 };
 
 let headerStyle = {
-    boxSizing: 'border-box',
     padding: 15,
     position: 'absolute',
     textAlign: 'right',
@@ -19,12 +18,37 @@ let headerStyle = {
     width: '100%'
 };
 
+let currentActionStyle = {
+    backgroundColor: colors.red,
+    border: '0 none',
+    boxShadow: shadows.boxShadow,
+    color: colors.gold,
+    fontSize: '25px',
+    fontWeight: 'bold',
+    height: 50,
+    left: -20,
+    padding: 10,
+    paddingLeft: 35,
+    position: 'absolute',
+    textAlign: 'left',
+    top: 15,
+    width: 'calc(100% - 60px)'
+};
+
+let closeActionStyle = {
+    color: colors.darkRed,
+    fontSize: 30,
+    position: 'absolute',
+    right: 10,
+    textShadow: shadows.textShadow,
+    top: 10
+};
+
 let headerButtonStyle = {
     backgroundColor: colors.red,
     border: `4px solid ${colors.gold}`,
     borderRadius: 10,
     boxShadow: shadows.boxShadow,
-    boxSizing: 'border-box',
     color: colors.gold,
     fontSize: 35,
     height: 50,
@@ -32,7 +56,6 @@ let headerButtonStyle = {
 };
 
 let contentStyle = {
-    boxSizing: 'border-box',
     height: 'calc(100% - 60px)',
     overflowY: 'auto',
     padding: '80px 10px 30px 10px'
@@ -64,6 +87,10 @@ class MainPage extends React.Component{
         return (
             <div style={pageStyle}>
                 <div style={headerStyle}>
+                    <button aria-label="Select to Close" style={currentActionStyle}>
+                        Talk To... 
+                        <FontAwesome name="times" style={closeActionStyle} />
+                    </button>
                     <button aria-label="Go to the Home Menu" style={headerButtonStyle}>
                         <FontAwesome name="home" />
                     </button>
