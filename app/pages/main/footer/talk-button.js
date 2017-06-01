@@ -4,7 +4,7 @@ let FooterButton = require('./footer-button');
 
 class TalkButton extends React.Component{
     startTalk () {
-        alert('Talk Action Activated');
+        this.props.setAction('talk', 'Talk To...');
     }
 
     render () {

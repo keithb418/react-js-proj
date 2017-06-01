@@ -12,12 +12,12 @@ let currentActionStyle = {
     fontSize: '25px',
     fontWeight: 'bold',
     height: 50,
-    left: -20,
     padding: 10,
     paddingLeft: 35,
     position: 'absolute',
     textAlign: 'left',
     top: 15,
+    transition: 'visibility 300ms, opacity 300ms, left 300ms', 
     width: 'calc(100% - 60px)'
 };
 
@@ -31,10 +31,14 @@ let closeActionStyle = {
 };
 
 class CurrentAction extends React.Component{
+    getClass () {
+        return this.props.actionName ? 'visible-action' : 'invisible-action';
+    }
+
     render () {
         return (
-            <button aria-label="Select to Close" style={currentActionStyle}>
-                Talk To... 
+            <button aria-label="Select to Close" className={this.getClass()} style={currentActionStyle} onClick={this.props.unsetAction} >
+                {this.props.actionName}
                 <FontAwesome name="times" style={closeActionStyle} />
             </button>
         );

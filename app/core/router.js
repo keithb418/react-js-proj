@@ -28,9 +28,9 @@ class Router extends React.Component{
         };
     }
 
-    navigate(newRoute) {
+    navigate(route) {
         this.setState({
-            route: newRoute
+            route
         });
     }
 

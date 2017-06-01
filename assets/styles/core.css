@@ -2,3 +2,19 @@
     box-sizing: border-box;
     font-family: 'Times New Roman';
 }
+
+.hidden {
+    display: none !important;
+}
+
+.invisible-action {
+    left: -100px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible-action {
+    left: -20px;
+    opacity: 1;
+    visibility: visible;
+}

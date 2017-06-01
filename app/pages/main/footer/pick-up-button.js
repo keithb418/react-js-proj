@@ -4,7 +4,7 @@ let FooterButton = require('./footer-button');
 
 class PickUpButton extends React.Component{
     startPickUp () {
-        alert('Pick Up Started');
+        this.props.setAction('pick-up', 'Pick Up...');
     }
 
     render () {

@@ -4,7 +4,7 @@ let FooterButton = require('./footer-button');
 
 class LookButton extends React.Component{
     startLook () {
-        alert('Look Started');
+        this.props.setAction('look', 'Look At...');
     }
 
     render () {

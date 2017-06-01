@@ -22,9 +22,15 @@ class Footer extends React.Component{
         return (
             <div style={footerStyle}>
                 <HelpButton />
-                <LookButton />
-                <TalkButton />
-                <PickUpButton />
+                <LookButton 
+                    setAction={this.props.setAction}
+                />
+                <TalkButton
+                    setAction={this.props.setAction} 
+                />
+                <PickUpButton
+                    setAction={this.props.setAction} 
+                />
                 <InventoryButton />
                 <GoButton />
                 <WatsonButton />
