@@ -6,7 +6,7 @@ let HomePage = require('../pages/home/home-page');
 let MainPage = require('../pages/main/main-page');
 
 let style = {
-    height: window.outerHeight  
+    height: window.innerHeight  
 };
 
 class Router extends React.Component{
@@ -14,7 +14,7 @@ class Router extends React.Component{
         super(props);
 
         this.state = {
-            route: 'splash'
+            route: 'main'
         };
 
         let handleRoute = (route) => {
