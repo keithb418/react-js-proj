@@ -1,0 +1,101 @@
+{
+    "subtitle": "The Six Napoleons",
+    "background-color": "",
+    "foreground-color": "",
+    "start": {
+        "placeId": "bakerst",
+        "event": {
+            "type": "cutscene",
+            "targetId": "opening"
+        }
+    },
+    "inventory": {
+        "items": [
+            "riding-crop"
+        ]
+    },
+    "items": [
+        {
+            "id": "riding-crop",
+            "name": "Riding Crop",
+            "description": "A well-worn riding crop.  You always carry it with you on an investigation.",
+            "useWith": [
+                {
+                    "targetId": "complete-napoleon",
+                    "event": {
+                        "type": "cutscene",
+                        "targetId": "ending"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "violin",
+            "name": "Violin",
+            "roomDescription": "A {name} rests on a stool in the corner",
+            "pickUp": {
+                "event": {
+                    "type": "cutscene",
+                    "targetId": "play-violin"
+                },
+                "noTake": "true"
+            }
+        }
+    ],
+    "people": [
+        {
+            "id": "lestrade",
+            "name": "Inspector Lestrade",
+            "conversation": {
+                "statement": "Truth be told, Holmes, I believe you're wasting your time.  The culprit obviously suffers from some form of monomania and wishes to smash every image of Napoleon that he can find.  It's quite simple, really.",
+                "questions": [
+                    {
+                        "text": "Can you tell me the principal facts again?",
+                        "answer": {
+                            "statement": "Certainly.  There's a rather daft chap who has been smashing busts of Napoleon.  He's been to three places already."
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "places": [
+        {
+            "id": "bakerst",
+            "name": "421B Baker St.",
+            "hidden": "false",
+            "rooms": [
+                {
+                    "id": "room1",
+                    "items": [
+                        "violin"
+                    ],
+                    "people": [
+
+                    ],
+                    "exits": [
+
+                    ],
+                    "description": "You are in the sitting room of your flat at 421B Baker St.  It is a modest, comfortable room with several armchairs and a blazing fire.  {violin}",
+                    "hidden": false 
+                }
+            ]
+        }
+    ],
+    "checkpoints": [
+        {
+            "id": "check1",
+            "watson": "Nothing for it but to start asking around."
+        }
+    ],
+    "cutscenes": [
+        {
+            "id": "opening",
+            "description": "Watson, Lestrade, and Holmes are sitting at Baker St.  They talk about the Six Napoleons, Holmes decides to investigate."
+        },
+        {
+            "id": "play-violin",
+            "description": "You pick up the violin and play a slow mournful tune as you contemplate your investigation.  After a few minutes, you finish the tune and place the violin back on its stool."
+        }
+    ]
+}
