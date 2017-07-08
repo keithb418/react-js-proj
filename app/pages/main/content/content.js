@@ -13,10 +13,10 @@ let paperStyle = {
     minHeight: '100%'
 };
 
-let paperContents = <Room />;
-
 class Content extends React.Component{
     render () {
+        let paperContents = <Room actionType={this.props.actionType} />;
+
         return (
             <div style={contentStyle}><Paper contents={paperContents} style={paperStyle}></Paper></div>
         );

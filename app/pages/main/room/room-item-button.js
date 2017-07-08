@@ -24,13 +24,19 @@ let highlightStyles = {
 let styles = {};
 
 class RoomItemButton extends React.Component{
+    triggerAction () {
+        if (this.props.active) {
+            alert('action activated');
+        }
+    }
+
     getStyles () {
-        return this.active ? utils.extend({}, buttonStyles, highlightStyles) : utils.extend({}, buttonStyles);
+        return this.props.active ? utils.extend({}, buttonStyles, highlightStyles) : utils.extend({}, buttonStyles);
     }
 
     render () {
         return (
-            <button id={this.props.id} style={this.getStyles()}>{this.props.name}</button>
+            <button id={this.props.id} style={this.getStyles()} onClick={() => this.triggerAction()}>{this.props.name}</button>
         );
     }
 };

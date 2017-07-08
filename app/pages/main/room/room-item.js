@@ -14,7 +14,7 @@ class RoomItem extends React.Component{
     getDescription () {
         var descPieces = utils.splitDescription(item.roomDescription);
 
-        descPieces.splice(1, 0, <RoomItemButton key={item.id} id={item.id} name={item.name}/>);
+        descPieces.splice(1, 0, <RoomItemButton key={item.id} active={this.props.active} id={item.id} name={item.name}/>);
 
         return descPieces;
     }
