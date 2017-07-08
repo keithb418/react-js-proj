@@ -32,6 +32,7 @@
         {
             "id": "violin",
             "name": "Violin",
+            "description": "",
             "roomDescription": "A {name} rests on a stool in the corner",
             "pickUp": {
                 "event": {

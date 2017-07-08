@@ -1,4 +1,4 @@
-let gameOptions = require('../game-options.json');
+let gameOptions = require('../game-config.json');
 
 let Inventory = require('./Inventory');
 

@@ -1,5 +1,7 @@
 let React = require('react');
 
+let controller = require('../models/Controller');
+
 // Pages
 let SplashPage = require('../pages/splash/splash-page');
 let HomePage = require('../pages/home/home-page');
@@ -22,9 +24,9 @@ class Router extends React.Component{
         };
 
         this.routes = {
-            splash: <SplashPage navigate={handleRoute} subtitle={this.props.options.subtitle} />,
+            splash: <SplashPage navigate={handleRoute} subtitle={controller.subtitle} />,
             home: <HomePage navigate={handleRoute} />,
-            main: <MainPage navigate={handleRoute} options={this.props.options} />
+            main: <MainPage navigate={handleRoute} />
         };
     }
 
