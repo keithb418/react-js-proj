@@ -1,3 +1,5 @@
+let React = require('react');
+
 let gameOptions = require('../game-config.json');
 
 let Inventory = require('./Inventory');
@@ -6,6 +8,10 @@ class Controller {
     constructor() {
         this.inventory = new Inventory(gameOptions.inventory);
 
+        this.actions = {
+            look: this.look
+        };
+
         this.items = [];
 
         this.people = [];
@@ -13,6 +19,23 @@ class Controller {
         this.places = [];
 
         this.cutscenes = [];
+    }
+
+    setReactObj(reactObj) {
+        this.reactObj = reactObj;
+    }
+
+    performAction(item) {
+        this.actions[this.reactObj.state.actionType].call(this, item);
+
+        this.reactObj.unsetAction();
+    }
+
+    look(item) {
+        this.reactObj.setState({
+            popupContents: <span>{item.description}</span>,
+            showPopup: true
+        });
     }
 
     getItemById(id) {

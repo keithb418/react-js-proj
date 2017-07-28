@@ -24,9 +24,9 @@ let highlightStyles = {
 let styles = {};
 
 class RoomItemButton extends React.Component{
-    triggerAction () {
+    performAction () {
         if (this.props.active) {
-            alert('action activated');
+            this.props.performAction();
         }
     }
 
@@ -36,7 +36,7 @@ class RoomItemButton extends React.Component{
 
     render () {
         return (
-            <button id={this.props.id} style={this.getStyles()} onClick={() => this.triggerAction()}>{this.props.name}</button>
+            <button id={this.props.id} style={this.getStyles()} onClick={() => this.performAction()}>{this.props.name}</button>
         );
     }
 };

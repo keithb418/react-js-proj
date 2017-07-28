@@ -15,7 +15,7 @@ let paperStyle = {
 
 class Content extends React.Component{
     render () {
-        let paperContents = <Room actionType={this.props.actionType} />;
+        let paperContents = <Room actionType={this.props.actionType} action={this.props.action} />;
 
         return (
             <div style={contentStyle}><Paper contents={paperContents} style={paperStyle}></Paper></div>

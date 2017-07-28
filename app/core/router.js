@@ -16,7 +16,7 @@ class Router extends React.Component{
         super(props);
 
         this.state = {
-            route: 'main'
+            route: 'splash'
         };
 
         let handleRoute = (route) => {

@@ -9578,7 +9578,7 @@ var React = __webpack_require__(50);
 var ReactDOM = __webpack_require__(82);
 var App = __webpack_require__(81);
 
-ReactDOM.render(React.createElement(App, null), Document.getElementById('app'));
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 /* 84 */
